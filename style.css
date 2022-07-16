@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --grey: #6B7280;
+    --pink: #EC4899;
+    --purple: #8B5CF6;
+    --light: #EEE;
+}
+
+body {
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.container .task-form {
+    display: flex;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    appearance: none;
+    background: none;
+}
+
+.container .task-form .task-input {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.125rem;
+    margin-right: 1rem;
+    color: var(--light);
+}
+
+.task-input::placeholder {
+    color: var(--grey);
+}
+
+.container .task-form .task-input:checked {
+    background-color: var(--light);
+}
+
+.task-form #addBtn {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#addBtn:hover {
+    opacity: .8;
+}
+
+#addBtn:active {
+    opacity: .6;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1 1 0%;
+}
+
+main .tasks-container {
+    padding: 1rem;
+}
+
+.tasks-container h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--grey);
+}
+
+.tasks-container .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.tasks-container .task input.input-task {
+    color: var(--light);
+    font-size: 1.25rem;
+    width:180%;
+    display: block;
+    transition: .5s;
+}
+
+.task .btn-container button {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 0 1rem;
+    cursor: pointer;
+    transition: .5s;
+    text-transform: uppercase;
+}
+
+.btn-container .edit {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-container button:hover {
+    opacity: .8;
+}
+
+.btn-container button:active {
+    opacity: .6;
+}
+
+.btn-container .delete {
+    color: crimson;
+}
